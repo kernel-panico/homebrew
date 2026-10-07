@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego 3 - Homebrew</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container detail-container">
+        <div class="header-detail">
+            <a href="index.html" class="back-btn" title="Volver al inicio">← Inicio</a>
+            <h1>Preparando Homebrew</h1>
+            <div class="header-spacer"></div>
+        </div>
+
+        <div class="hero-detail-section">
+            <div class="detail-logo-container">
+                <img src="./juego6/logo.jpg" alt="Logo" class="detail-logo">
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-label">Desarrollador</span>
+                    <span class="info-value">kernel panico</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">versión</span>
+                    <span class="info-value">v1.0</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Tamaño</span>
+                    <span class="info-value">0 MB</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Plataforma</span>
+                    <span class="info-value">PlayStation 4</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./juego3/captura1.jpg" alt="Captura 1">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./juego3/captura2.jpg" alt="Captura 2">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./juego3/captura3.jpg" alt="Captura 3">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./juego3/captura4.jpg" alt="Captura 4">
+            </div>
+        </div>
+
+        <div class="description-box">
+            <h2>Descripción</h2>
+            <p>
+
+Descripcion...
+
+            </p>
+        </div>
+
+        <div class="download-box">
+            <h2>Descargar</h2>
+            <div class="download-actions">
+                <a href="https://enlacededescarga.pkg" class="download-btn primary" target="_blank" rel="noopener noreferrer">
+                    Descargar (.pkg) <span class="btn-size">Mega</span>
+                </a>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <img src="https://avatars.githubusercontent.com/u/338737433?s=96&v=4" alt="kernel panico logo" class="footer-avatar">
+            <p>© 2026 Homebrew — <a href="https://github.com/kernel-panico/" target="_blank" rel="noopener">kernel panico</a></p>
+        </footer>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Ampliada">
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

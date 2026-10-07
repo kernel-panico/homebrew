@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego 1 - Homebrew</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container detail-container">
+        <div class="header-detail">
+            <a href="index.html" class="back-btn" title="Volver al inicio">← Inicio</a>
+            <h1>Monte Everest</h1>
+            <div class="header-spacer"></div>
+        </div>
+
+        <div class="hero-detail-section">
+            <div class="detail-logo-container">
+                <img src="./juego1/logo.jpg" alt="Logo" class="detail-logo">
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="info-label">Desarrollador</span>
+                    <span class="info-value">kernel panico</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">versión</span>
+                    <span class="info-value">v1.0</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Tamaño</span>
+                    <span class="info-value">734 MB</span>
+                </div>
+                <div class="info-card">
+                    <span class="info-label">Plataforma</span>
+                    <span class="info-value">PlayStation 4</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./juego1/captura1.jpg" alt="Captura 1">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./juego1/captura2.jpg" alt="Captura 2">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./juego1/captura3.jpg" alt="Captura 3">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="./juego1/captura4.jpg" alt="Captura 4">
+            </div>
+        </div>
+
+        <div class="description-box">
+            <h2>Descripción</h2>
+            <p>
+
+Hola, comparto con ustedes algunos de mis primeros archivos PKG para PS4.
+El archivo .pkg está listo para que lo instalen y prueben directamente en sus consolas usando GoldHEN .
+Es una recreación de forma libre de una ubicación del mundo real en Nepal, creada usando datos de elevación reales y texturas satelitales; fue desarrollada en Unity 2017 usando el SDK de PS4. El entorno está diseñado para la exploración y para observar cómo la consola maneja la carga de este tipo de datos geográficos.
+
+Detalles del Homebrew:
+Plataforma: PS4 (Requiere GoldHEN).
+Motor: Unity 2017.
+Contenido: Entorno de exploración 3D basado en el terreno real de Nepal, alrededor del Monte Everest.
+Texturas sat 8k.
+Formato: Archivo .pkg listo para la instalación.
+.incluye una capa de nubes cirrus y un par de otras opciones, como cambiar la textura del terreno, además de la capacidad de medir la altura real de las montañas si presiona Triángulo.
+(La cámara tiene movimiento completo y sin restricciones y puede atravesar el terreno, lo que puede resultar en una apariencia poco atractiva o antinatural; la he dejado así para esta versión inicial. Presione Cuadrado para cambiar la textura del terreno; esto puede tardar unos segundos, así que por favor espere un momento mientras se cargan y aplican las texturas).
+
+            </p>
+        </div>
+
+        <div class="download-box">
+            <h2>Descargar</h2>
+            <div class="download-actions">
+                <a href="https://mega.nz/file/YRUh2Jxa#SYhILhUwAEfH3ojDBxc44PkjMMqdGZrnJjAaWzdutKA" class="download-btn primary" target="_blank" rel="noopener noreferrer">
+                    Descargar (.pkg) <span class="btn-size">Mega</span>
+                </a>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <img src="https://avatars.githubusercontent.com/u/338737433?s=96&v=4" alt="kernel panico logo" class="footer-avatar">
+            <p>© 2026 Homebrew — <a href="https://github.com/kernel-panico/" target="_blank" rel="noopener">kernel panico</a></p>
+        </footer>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Ampliada">
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
