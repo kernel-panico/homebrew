@@ -427,6 +427,7 @@ img {
     }
 
     .games-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
@@ -493,11 +494,5 @@ img {
 
     .detail-logo {
         width: 50%;
-    }
-}
-
-@media (max-width: 380px) {
-    .games-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
