@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    max-width: 650px;
+    max-width: 900px;
     width: 100%;
 }
 
@@ -119,7 +119,7 @@ h1 {
     background-color: #161b22;
     border: 1px solid #30363d;
     border-radius: 8px;
-    padding: 12px;
+    padding: 3px;
     aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
