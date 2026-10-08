@@ -456,7 +456,7 @@ img {
     }
 
     .detail-logo {
-        width: calc(25% - 3px);
+        width: 75%;
     }
 
     .info-grid {
